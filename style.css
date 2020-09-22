@@ -3,7 +3,13 @@ body {
     margin: 0
 }
 
-div {
+.content-wrapper {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.space-top {
     display: flex;
     justify-content: center;
     align-items: center;
