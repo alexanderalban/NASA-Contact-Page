@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   height: 450px;
   max-width: 850px;
-  min-width: 600px;
+  min-width: 100px;
   position: relative;
   margin: auto;
   margin-bottom: 20px;
@@ -33,7 +33,7 @@ ul {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 10px;
   padding-left: 0%;
-  width: 270px;
+  max-width: 270px;
 }
 
 section {
@@ -42,7 +42,6 @@ section {
   flex-direction: row;
   height: 324px;
   max-width: 850px;
-  min-width: 600px;
   background-color: rgb(230, 230, 230);
   margin-top: 20px;
   position: relative;
@@ -52,6 +51,7 @@ section {
 
 .resizedTextbox {
   height: 50px;
+  max-width: 240px;
 }
 
 textarea {
@@ -66,12 +66,12 @@ textarea {
 
 input[type="text"] {
   border: none;
-  width: 240px;
+  max-width: 240px;
 }
 
 input[type="textarea"] {
   border: none;
-  width: 240px;
+  max-width: 240px;
   height: 50px;
 }
 
@@ -97,7 +97,7 @@ input[type="submit"] {
 /* Slideshow container */
 .slideshow-container {
   max-width: 850px;
-  min-width: 600px;
+  min-width: 100px;
   position: relative;
   margin: auto;
 }
@@ -206,18 +206,22 @@ input[type="submit"] {
 /* Container needed to position the overlay. Adjust the width as needed */
 .container {
   max-width: 850px;
-  min-width: 600px;
   position: relative;
   margin: auto;
   margin-bottom: 15pt;
+  overflow: hidden;
 }
 
 /* Make the image to responsive */
 .image {
   max-width: 850px;
-  min-width: 600px;
   position: relative;
   margin: auto;
+  overflow: hidden;
+}
+
+#horizon {
+  max-width: 850px;
 }
 
 /* The overlay effect (full height and width) - lays on top of the container and over the image */
@@ -247,4 +251,18 @@ input[type="submit"] {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  li {
+    font-size: 10px;
+  }
+
+  .image {
+    max-width: 600px;
+  }
+
+  #horizon {
+    max-width: 600px;
+  }
 }
